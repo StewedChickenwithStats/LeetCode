@@ -21,7 +21,7 @@ public:
                 return false;
         return true;
     }
-    //二分法找能满足的孩子个数
+    //用二分法找能满足的孩子个数
     int findContentChildren(vector<int> &g, vector<int> &s)
     {
         //对两个向量进行排序
