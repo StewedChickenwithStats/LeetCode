@@ -50,6 +50,7 @@ public:
 int main()
 {
     Solution ans;
+    //输入条件
     int target = 7;
     vector<int> nums;
     int tmp[] = {2, 3, 1, 2, 4, 3};
