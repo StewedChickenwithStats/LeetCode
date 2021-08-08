@@ -31,7 +31,7 @@ public:
         int L = 0, R = g.size(), mid, count = 0;
         while (R > L)
         {
-            mid = L + (R - L) / 2; //mid的值永远是大于L小于R的
+            mid = L + (R - L) / 2; //mid的值永远[L,R)
             if (check(mid + 1, g, s))
             {                //能满足mid+1个孩子时
                 L = mid + 1; //增大mid的值
