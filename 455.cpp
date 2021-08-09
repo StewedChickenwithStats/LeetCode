@@ -28,20 +28,18 @@ public:
         sort(g.begin(), g.end());
         sort(s.begin(), s.end());
         //在孩子胃口向量（g）中进行二分查找
-        int L = 0, R = g.size(), mid, count = 0;
+        int len1 = g.size();
+        int L = 0, R = len1, mid;
         while (R > L)
         {
-            mid = L + (R - L) / 2; //mid的值永远[L,R)
-            if (check(mid + 1, g, s))
-            {                //能满足mid+1个孩子时
-                L = mid + 1; //增大mid的值
-                count = mid + 1;
-            }
+            mid = L + (R - L) / 2;    //mid的值永远[L,R)
+            if (check(mid + 1, g, s)) //能满足mid+1个孩子时
+                L = mid + 1;          //增大mid的值
             else
                 R = mid; //减小mid的值
         }
         //返回最终值
-        return count;
+        return L;
     }
 };
 
